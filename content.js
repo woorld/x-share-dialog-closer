@@ -1,19 +1,16 @@
-// TODO: 早期リターン
-if (location.pathname.startsWith('/intent')) {
-  const observer = new MutationObserver(() => {
-    const textbox = document.querySelector('main[role="main"] div[data-testid="tweetTextarea_0"][role="textbox"]')
-    const closeButton = document.querySelector('button[data-testid="app-bar-close"]')
+const observer = new MutationObserver(() => {
+  const textbox = document.querySelector('main[role="main"] div[data-testid="tweetTextarea_0"][role="textbox"]')
+  const closeButton = document.querySelector('button[data-testid="app-bar-close"]')
 
-    if (!closeButton || !textbox || !textbox.textContent) {
-      return
-    }
+  if (!closeButton || !textbox || !textbox.textContent) {
+    return
+  }
 
-    closeButton.click()
-    observer.disconnect()
-  })
+  closeButton.click()
+  observer.disconnect()
+})
 
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-  })
-}
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+})

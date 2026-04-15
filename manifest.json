@@ -5,7 +5,7 @@
   "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": [ "https://x.com/*" ],
+      "matches": [ "https://x.com/intent/*" ],
       "js": [ "content.js" ]
     }
   ]
