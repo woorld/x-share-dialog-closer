@@ -1,7 +1,7 @@
 {
-  "name": "x-sharing-fix",
+  "name": "x-share-dialog-closer",
   "version": "1.0.0",
-  "description": "シェアボタンからXに投稿を行うとき、デフォルトの入力欄から投稿内容を削除する拡張機能",
+  "description": "シェアボタンからXに投稿を行うときに自動でダイアログを閉じていろいろ楽にする拡張機能",
   "manifest_version": 3,
   "content_scripts": [
     {
